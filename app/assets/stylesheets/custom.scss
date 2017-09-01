@@ -1,0 +1,299 @@
+
+/* @import "bootstrap-sprockets"; */
+@import "bootstrap";
+@import "font-awesome";
+@import "font-awesome-sprockets";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+/* universal */
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+  }
+}
+
+/* forms */
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  float: left;
+  padding-left: 8px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    margin-top: 10px;
+    
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left:0;
+}
+
+/* login */
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  width: 40%;
+}
+
+.usrpassformat {
+  float: left;
+  padding-left: 12.5px;
+  padding-top: 8px;
+}
+
+.signup_link {
+  display: inline-block;
+  padding-right: 34px;
+  padding-top: 10px;
+}
+
+.signup_field {
+  width: 90%;
+  height: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+form {
+  // border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  height: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  text-align: center;
+  padding: 0px;
+  background-color: #537c93;
+  color: white;
+  margin: 8px 12.5px;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* button {
+
+  text-align: center;
+  background-color: #537c93;
+  color: white;
+  // padding: 14px 20px;
+  margin: 8px 14px;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
+
+input[type="checkbox"] {
+    // display:inline-block;
+    width:15px;
+    height:15px;
+    // margin-top: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    cursor:pointer;
+
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+
+/* navbar */
+
+/* makes nav bar reach ends of website */
+.navbar {
+  border-radius: 0 !important;
+  border: 1px solid #537c93;
+  background-color: #537c93
+}
+
+.navbar {
+  .navbar-nav li a {
+    &:hover {
+      background-color: #286090;
+    }
+    &:focus {
+      background-color: #286090;
+    }
+    &:active {
+      background-color: #286090;
+    }
+    &:visited{
+      background-color: #286090;
+    }
+
+  }
+}
+
+.navbar-default {
+  background-color: #537c93;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: 200;
+  font-size: 1.1em;
+  vertical-align: middle;
+  //  letter-spacing: 0.06em;
+}
+
+.navbar-brand {
+  font-size: 1.5em !important;
+  vertical-align: middle;
+  padding: 14px;
+  color: white !important;
+} 
+
+.dropdown-toggle {
+  color: red !important;
+}
+.caret {
+  color: red;
+}
+.dropdown-menu {
+  background-color: #537c93;
+}
+
+.dropdown-menu > li {
+color: white !important;
+  font-size: 1.1em;
+  
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}

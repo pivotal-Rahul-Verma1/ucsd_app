@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+<h1>Edit Profile</h1>
+
+<div class="jumbotron center">
+  <div class="container">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name, class: "usrpassformat" %> <br>
+      <%= f.text_field :name, class: "signup_field form-control", placeholder: "Enter Name" %> <br>
+
+      <%= f.label :email, class: "usrpassformat" %> <br> 
+      <%= f.email_field :email, class: "signup_field form-control", placeholder: "Enter Email" %>  <br> 
+
+      <%= f.label :password, class: "usrpassformat" %> <br>
+      <%= f.password_field :password, class: "signup_field form-control", placeholder: "Enter Password" %> <br>
+
+      <%= f.label :password_confirmation, "Password Confirmation", class: "usrpassformat" %> <br>
+      <%= f.password_field :password_confirmation, class: "signup_field form-control", placeholder: "Confirm Password" %>
+
+      <%= f.submit "Save Changes", class: "btn btn-primary", :style => "margin-top: 10px" %>
+    <% end %>
+  </div>
+</div>
